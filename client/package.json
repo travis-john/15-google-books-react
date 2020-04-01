@@ -1,5 +1,5 @@
 {
-  "name": "google-books-react",
+  "name": "cms",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
