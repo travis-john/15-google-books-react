@@ -3,11 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
-import PostState from './context/PostState'
 
 function App() {
   return (
-    <PostState >
       <Router>
         <div>
           <Nav />
@@ -18,7 +16,6 @@ function App() {
           </Switch>
         </div>
       </Router>
-    </PostState>
   );
 }
 
