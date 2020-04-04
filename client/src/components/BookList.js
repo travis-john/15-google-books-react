@@ -1,13 +1,14 @@
 import React from "react";
+import {ListGroup, ListGroupItem} from 'reactstrap';
 
 // This component exports both the List and ListItem components
 
 export const List = ({ children }) => (
-  <ul className="list-group">
+  <ListGroup>
     {children}
-  </ul>
+  </ListGroup>
 );
 
 export function ListItem({ children }) {
-  return <li className="list-group-item">{children}</li>;
+  return <ListGroupItem>{children}</ListGroupItem>;
 }
