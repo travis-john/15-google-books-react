@@ -17,7 +17,7 @@ function BookForm({ q, handleInputChange, handleFormSubmit }) {
           onChange={handleInputChange}
           required
         />
-      </div>
+      </FormGroup>
       <div className="pull-right">
         <Button
           onClick={handleFormSubmit}
@@ -28,7 +28,7 @@ function BookForm({ q, handleInputChange, handleFormSubmit }) {
         >
           Search
         </Button>
-      </FormGroup>
+      </div>
     </Form>
   );
 }

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Jumbotron from "../components/Jumbotron";
-import Card from "../components/BookCard";
+import BookJumbotron from "../components/BookJumbotron";
+import BookCard from "../components/BookCard";
 import Book from "../components/Book";
 import Footer from "../components/Footer";
 import API from "../utils/API";
-import { Col, Row, Container } from "../components/Grid";
+import {Col, Row, Container } from 'reactstrap';
 import { List } from "../components/BookList";
 
 class Saved extends Component {
@@ -34,17 +34,17 @@ class Saved extends Component {
     return (
       <Container>
         <Row>
-          <Col size="md-12">
-            <Jumbotron>
+          <Col md='12'>
+            <BookJumbotron>
               <h1 className="text-center">
                 <strong>Google Books Search</strong>
               </h1>
-            </Jumbotron>
+            </BookJumbotron>
           </Col>
         </Row>
         <Row>
-          <Col size="md-12">
-            <Card title="Saved Books" icon="download">
+          <Col md='12'>
+            <BookCard title="Saved Books" icon="download">
               {this.state.books.length ? (
                 <List>
                   {this.state.books.map(book => (
@@ -70,7 +70,7 @@ class Saved extends Component {
               ) : (
                 <h2 className="text-center">No Saved Books</h2>
               )}
-            </Card>
+            </BookCard>
           </Col>
         </Row>
         <Footer />

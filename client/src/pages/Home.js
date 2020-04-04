@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Jumbotron from "../components/Jumbotron";
-import Card from "../components/BookCard";
-import Form from "../components/BookForm";
+import BookJumbotron from "../components/BookJumbotron";
+import BookCard from "../components/BookCard";
+import BookForm from "../components/BookForm";
 import Book from "../components/Book";
 import Footer from "../components/Footer";
 import API from "../utils/API";
-import { Col, Row, Container } from "../components/Grid";
+import { Col, Row, Container } from "reactstrap";
 import { List } from "../components/BookList";
 
 class Home extends Component {
@@ -60,26 +60,26 @@ class Home extends Component {
     return (
       <Container>
         <Row>
-          <Col size="md-12">
-            <Jumbotron>
+          <Col md='12'>
+            <BookJumbotron>
               <h1 className="text-center">
                 <strong>Google Books Search</strong>
               </h1>
-            </Jumbotron>
+            </BookJumbotron>
           </Col>
-          <Col size="md-12">
-            <Card title="Book Search" icon="far fa-book">
-              <Form
+          <Col md='12'>
+            <BookCard title="Book Search" className='far'>
+              <BookForm
                 handleInputChange={this.handleInputChange}
                 handleFormSubmit={this.handleFormSubmit}
                 q={this.state.q}
               />
-            </Card>
+            </BookCard>
           </Col>
         </Row>
         <Row>
-          <Col size="md-12">
-            <Card title="Results">
+          <Col md='12'>
+            <BookCard title="Results">
               {this.state.books.length ? (
                 <List>
                   {this.state.books.map(book => (
@@ -105,7 +105,7 @@ class Home extends Component {
               ) : (
                 <h2 className="text-center">{this.state.message}</h2>
               )}
-            </Card>
+            </BookCard>
           </Col>
         </Row>
         <Footer />
