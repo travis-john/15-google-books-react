@@ -1,14 +1,14 @@
 import React from "react";
+import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
 
-function Form({ q, handleInputChange, handleFormSubmit }) {
+function BookForm({ q, handleInputChange, handleFormSubmit }) {
   return (
-    <form>
-      <div className="form-group">
-        <label htmlFor="Query">
+    <Form>
+      <FormGroup>
+        <Label htmlFor="Query">
           <strong>Book</strong>
-        </label>
-        <input
-          className="form-control"
+        </Label>
+        <Input
           id="Title"
           type="text"
           value={q}
@@ -19,16 +19,18 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
         />
       </div>
       <div className="pull-right">
-        <button
+        <Button
           onClick={handleFormSubmit}
           type="submit"
-          className="btn btn-lg btn-danger float-right"
+          color='danger'
+          size='lg'
+          className="float-right"
         >
           Search
-        </button>
-      </div>
-    </form>
+        </Button>
+      </FormGroup>
+    </Form>
   );
 }
 
-export default Form;
+export default BookForm;
